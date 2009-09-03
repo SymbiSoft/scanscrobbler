@@ -1,11 +1,11 @@
 #summary Why I wrote ScanScrobbler.
 
-= Introduction =
+== Introduction ==
 
 Frustrated with the lack of a way to scrobble CD's I had listened to on my stereo, I was thrilled when the [http://lastfmstats.livefrombmore.com/universalscrobbler/ Universal Scrobbler] came along.
 
 
-= Details =
+== Details ==
 
 I did find myself wishing for a way to scrobble on the spot of the CD player though, without needing to open the laptop and remember what I'd played at a later date. I thought it must be possible to just scan a CD barcode, get the track details and scrobble that. 
 
