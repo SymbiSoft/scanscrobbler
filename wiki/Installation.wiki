@@ -1,0 +1,13 @@
+#summary Installing !ScanScrobbler to your phone
+
+= Introduction =
+
+!ScanScrobbler requires two other installations for full working order. Please see below for the entire installation procedure.
+
+
+= Details =
+  # Download and install the Python for S60 runtime, v 1.9.6  from https://garage.maemo.org/frs/download.php/6359/Python_1.9.6_fixed.sis (If you are a pyS60 developer, or have other python applications installed, you will be able to skip this step)
+  # Download and install to your phone the 3rd party barcode scanner, [http://www.upcode.fi/mobile/pc_download.asp?language=1 UpCode]. This is also available from the Ovi store.
+  # Download and install !ScanScrobbler from the [http://code.google.com/p/scanscrobbler/downloads/list downloads] page.
+
+You are now ready to use ScanScrobbler. For more info see the page on [usage].
