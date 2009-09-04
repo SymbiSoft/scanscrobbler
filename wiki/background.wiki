@@ -2,12 +2,12 @@
 
 == Introduction ==
 
-Frustrated with the lack of a way to scrobble CD's I had listened to on my stereo, I was thrilled when the [http://lastfmstats.livefrombmore.com/universalscrobbler/ Universal Scrobbler] came along.
+Frustrated with the lack of a way to scrobble CD's I had listened to on my stereo, I was thrilled when the [http://lastfmstats.livefrombmore.com/universalscrobbler/ Universal Scrobbler] came along. But I wanted a way to scrobble whilst at the stereo, without having to open a laptop.
 
 == Video ==
-Don't want to read?
+Don't want to read any more?
 
-Watch instead.
+Watch a vid instead.
 
 <wiki:video url="http://www.youtube.com/watch?v=LGcyZCgKokM" />
 
