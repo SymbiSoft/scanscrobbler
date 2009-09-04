@@ -500,7 +500,7 @@ def handle_selection():
         return
     # elif (lb.current() == 4):
         # Debuging stuff goes here!
-    return 
+        # return 
     
     # Initialise a variable
     found = False
