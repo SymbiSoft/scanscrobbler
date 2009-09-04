@@ -4,18 +4,30 @@
 ScanScrobbler
 ~~~~~~~~~~~~~
 
+
 Description
 ~~~~~~~~~~~
 
-ScanScrobbler is a simple script designed to make it possible to submit an albums worth of tracks to a last.fm account.
-The premise behind the script is that it is not usually possible to scrobble things you hav listened to from CD on any non-data drive (eg on a regular car or domestic hifi).
-The script aims to identify the CD you wish to scrobble by scanning the barcode, using a free third party application, 'UpCode', available from the Ovi Store. This must be downloaded and installed on your phone for this part of the scipt to work.
-The script will also allow you to input the barcode digits manually, although this is not a guaranteed way to work, as digits displayed under barcodes frequently omit a checksum digit only readable using a barcode reader (such as UpCode).
+ScanScrobbler is a simple script designed to make it possible to submit an 
+albums worth of tracks to a last.fm account.
+The premise behind the script is that it is not usually possible to scrobble 
+things you hav listened to from CD on any non-data drive (eg on a regular car 
+or domestic hifi).
+The script aims to identify the CD you wish to scrobble by scanning the 
+barcode, using a free third party application, 'UpCode', available from the 
+Ovi Store. This must be downloaded and installed on your phone for this part 
+of the scipt to work.
+The script will also allow you to input the barcode digits manually, although 
+this is not a guaranteed way to work, as digits displayed under barcodes 
+frequently omit a checksum digit only readable using a barcode reader (such 
+as UpCode).
+
 
 Script Requirements
 ~~~~~~~~~~~~~~~~~~~
 
-The script uses 3 external libraries which must be installed in your path for the script to function.
+The script uses 3 external libraries which must be installed in your path for 
+the script to function.
 
 Beautiful Soup -  http://www.crummy.com/software/BeautifulSoup/
     An html/xml parser
@@ -24,7 +36,8 @@ Pyscrobbler - http://code.google.com/p/pyscrobbler/
 PowerClipboard - http://cyke64.googlepages.com/clipboard.py
     for retrieving info from the phone's clipboard
 
-In order to scan a barcode, the script also requires installation of the barcode reader 'UpCode'
+In order to scan a barcode, the script also requires installation of the 
+barcode reader 'UpCode'
    http://www.upcode.fi/mobile/pc_download.asp?language=1
    UpCode is also available at the Ovi Store
 
@@ -32,17 +45,18 @@ In order to scan a barcode, the script also requires installation of the barcode
 Last.fm accounts and privacy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Account details (usernames and passwords) are currently stored in an UNENCRYPTED database.
+Account details (usernames and passwords) are currently stored in an 
+UNENCRYPTED database.
 If this concerns you, don't use ScanScrobbler.
 
 
 Coding TODO
 ~~~~~~~~~~~
 
-* Not happy with the way time played of scrobbled tracks are determined in scrobble_tracks()
 * Add option for scrobbling just some tracks from the album
 * Provide handling for multiple matches in the database for one barcode
-  I have yet to encounter this behaviour, but if it's found, please let me know!
+  I have yet to encounter this behaviour, please let me know if you experience
+  it. 
 * Encrypt stored last.fm passwords
 * Find python native barcode reading library that works on S60
 
@@ -78,9 +92,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
-
-# calm the user when they are presented with a blank screen
-print 'loading...'
 
 # import stuff
 import sys, urllib2, appuifw, scriptext, e32, e32dbm, pickle
@@ -127,7 +138,8 @@ def msg(text):
    
 def tip(text):
     '''
-    Simple wrapper for displaying tips, (user can choose to hide these in settings)
+    Simple wrapper for displaying tips, (user can choose to hide these in 
+    settings)
     
     @type text: string
     @param text: The message to display to the user
@@ -138,7 +150,8 @@ def tip(text):
         
 def info(text):
     '''
-    Displays tool-tip like info to the user (usually to display scrobbling progress)
+    Displays tool-tip like info to the user (usually to display scrobbling 
+    progress)
     
     @type text: unicode string
     @param text: The message to display to the user
@@ -164,7 +177,8 @@ def info(text):
     
 def load_prefs():
     '''
-    Attempts to load preferences from the pref file, and the account details from the user database
+    Attempts to load preferences from the pref file, and the account details 
+    from the user database
     '''
     try:
         global prefs
@@ -201,7 +215,8 @@ def add_user():
     
 def select_user():
     '''
-    Allows user to select which last.fm account to scrobble to. If only one user exists in the 
+    Allows user to select which last.fm account to scrobble to. If only one 
+    user exists in the 
     database, it is selected automatically
     '''
     global prefs
@@ -262,8 +277,8 @@ def about():
     
 def identify_release(barcode):
     '''
-    Takes a barcode string and submits it as a query to musicbrainz.org webservice to determine the 
-    release details - artist, title and mbid (musicbrainz id)
+    Takes a barcode string and submits it as a query to musicbrainz.org 
+    webservice to determine the release details - artist, title and mbid (musicbrainz id)
     
     @type barcode: string
     @param barcode: a string of digits (usually 12-13 digits) corresponding to a barcode on a CD
